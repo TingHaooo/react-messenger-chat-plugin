@@ -1,7 +1,7 @@
 const express = require('express')
 const { createElement } = require('react')
 const { renderToString } = require('react-dom/server')
-const reactMessenger = require('react-messenger-chat-plugin').default
+const reactMessenger = require('react-messenger-chat-plugin')
 
 const port = 3000
 const app = express()
