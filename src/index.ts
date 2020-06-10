@@ -1,3 +1,3 @@
-import reactMessengerChatPlugin from './reactMessengerChatPlugin'
+import reactMessengerChatPlugin from './reactMessengerChatPlugin/index'
 
 export default reactMessengerChatPlugin
