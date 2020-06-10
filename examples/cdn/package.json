@@ -1,0 +1,9 @@
+{
+  "name": "react-messenger-chat-plugin-examples-cdn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react-messenger-chat-plugin": "link:1.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "react-messenger-chat-plugin-examples-ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-messenger-chat-plugin": "link:1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

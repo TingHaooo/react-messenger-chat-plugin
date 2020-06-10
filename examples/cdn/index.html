@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDN example</title>
+</head>
+
+<body>
+  <div id='root'></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="./node_modules/react-messenger-chat-plugin/dist//index.umd.js"></script>
+<script>
+  const ReactMessenger = window.ReactMessengerChatPlugin
+  const root = document.getElementById('root')
+  ReactDOM.render(
+    React.createElement(ReactMessenger),
+    root
+  )
+</script>
+
+</html>

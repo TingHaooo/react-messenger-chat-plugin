@@ -1,0 +1,77 @@
+{
+  "name": "react-messenger-chat-plugin",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "repository": "https://github.com/TingHaooo/react-messenger-chat-plugin.git",
+  "author": "Ting-Hao Chang <ztingh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lintStaged": "lint-staged",
+    "tsc": "tsc --noEmit",
+    "tsc:watch": "tsc --noEmit --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "converalls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "clean": "rimraf dist",
+    "prebuild": "yarn clean",
+    "build": "rollup -c"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lintStaged && yarn tsc",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "import-sort --write",
+      "eslint --fix --quiet",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-typescript": "^4.1.2",
+    "@testing-library/react": "^10.0.4",
+    "@types/jest": "^25.1.0",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.1.0",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-parser-babylon": "^6.0.0",
+    "import-sort-parser-typescript": "^6.0.0",
+    "import-sort-style-module": "^6.0.0",
+    "jest": "^25.1.0",
+    "lint-staged": "^9.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^1.27.4",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "ts-jest": "^25.0.0",
+    "typescript": "^3.7.2"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0",
+    "react-dom": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0"
+  },
+  "dependencies": {}
+}
