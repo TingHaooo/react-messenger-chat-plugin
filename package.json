@@ -16,7 +16,8 @@
     "converalls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "clean": "rimraf dist",
     "prebuild": "yarn clean",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w"
   },
   "husky": {
     "hooks": {
